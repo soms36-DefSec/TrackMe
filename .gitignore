@@ -22,3 +22,21 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Build output
+release/
+.vite-cache/
+
+# Lock files (using npm only)
+bun.lock
+bun.lockb
+
+# Dev logs
+server.log
+
+# Docs no longer needed
+EXECUTE.md
+
+# Startup scripts (web launcher)
+install_startup.bat
+start.bat

@@ -4,6 +4,8 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig(() => ({
+  cacheDir: '.vite-cache',
+  base: process.env.ELECTRON === 'true' ? './' : '/',
   server: {
     host: "::",
     port: 8080,
@@ -17,5 +19,9 @@ export default defineConfig(() => ({
       "@": path.resolve(__dirname, "./src"),
     },
     dedupe: ["react", "react-dom", "react/jsx-runtime", "react/jsx-dev-runtime"],
+  },
+  build: {
+    outDir: 'dist',
+    emptyOutDir: true,
   },
 }));
